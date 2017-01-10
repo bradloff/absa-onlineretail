@@ -18,7 +18,7 @@ import java.util.Collection;
  */
 
 @RestController
-@RequestMapping(value="inventory")
+@RequestMapping(value="v1")
 public class InventoryController {
 
     @Autowired
