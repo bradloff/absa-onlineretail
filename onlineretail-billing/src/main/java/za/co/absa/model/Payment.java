@@ -9,6 +9,14 @@ public class Payment {
     Long id;
     BigDecimal total;
 
+    public Payment() {
+    }
+
+    public Payment(Long id, BigDecimal total) {
+        this.id = id;
+        this.total = total;
+    }
+
     public Long getId() {
         return id;
     }
