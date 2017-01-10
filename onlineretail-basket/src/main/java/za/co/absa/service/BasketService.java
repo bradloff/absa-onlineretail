@@ -1,5 +1,7 @@
 package za.co.absa.service;
 
+import za.co.absa.model.BasketItem;
+
 import java.util.Collection;
 
 /**
@@ -7,9 +9,9 @@ import java.util.Collection;
  */
 public interface BasketService {
 
-    public String addToBasket(String item);
+    public BasketItem addToBasket(String item);
     public String removeFromBasket(String item);
-    public Collection<String> listBasketItems();
+    public Collection<BasketItem> listBasketItems();
     public String listBasketItem();
     public String calculateBasket();
     public String checkout();

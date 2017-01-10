@@ -9,10 +9,14 @@ public class BasketItem {
     int stockCount;
     String name;
 
-    public BasketItem(int id, int stock, String name){
+
+    int quantity;
+
+    public BasketItem(int id, int stock, String name, int quantity){
         setId(id);
         setStockCount(stock);
         setName(name);
+        setQuantity(quantity);
     }
 
     public int getId() {
@@ -35,6 +39,13 @@ public class BasketItem {
         return name;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
     public void setName(String name) {
         this.name = name;
     }

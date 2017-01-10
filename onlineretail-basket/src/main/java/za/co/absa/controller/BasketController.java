@@ -5,10 +5,8 @@ package za.co.absa.controller;
  */
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import za.co.absa.model.BasketItem;
 import za.co.absa.service.BasketServiceImpl;
 
 import java.util.Collection;
@@ -21,7 +19,7 @@ public class BasketController {
     BasketServiceImpl basketService;
 
     @RequestMapping(value = "" , method = RequestMethod.GET)
-    public Collection<String> listBasketItems(){
+    public Collection<BasketItem> listBasketItems(){
 
         return basketService.listBasketItems();
     }
@@ -33,7 +31,8 @@ public class BasketController {
     }
 
     @RequestMapping(value = "" , method = RequestMethod.POST)
-    public String addToBasket(@RequestBody String item){
+    @ResponseBody
+    public BasketItem addToBasket(@RequestBody String item){
 
             return basketService.addToBasket(item);
     }
