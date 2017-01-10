@@ -10,6 +10,7 @@ public interface BasketService {
     public String addToBasket(String item);
     public String removeFromBasket(String item);
     public Collection<String> listBasketItems();
+    public String listBasketItem();
     public String calculateBasket();
     public String checkout();
 }

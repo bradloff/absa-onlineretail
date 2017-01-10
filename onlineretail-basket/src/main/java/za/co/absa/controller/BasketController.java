@@ -5,6 +5,7 @@ package za.co.absa.controller;
  */
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,31 +14,37 @@ import za.co.absa.service.BasketServiceImpl;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/basket")
 public class BasketController {
 
     @Autowired
     BasketServiceImpl basketService;
 
-    @RequestMapping(value = "/addToBasket" , method = RequestMethod.POST)
-    public String addToBasket(String item){
-
-            return basketService.addToBasket(item);
-    }
-
-    @RequestMapping(value = "/removeFromBasket" , method = RequestMethod.POST)
-    public String removeFromBasket(String item){
-
-        return basketService.removeFromBasket(item);
-    }
-
-    @RequestMapping(value = "/listBasketItems" , method = RequestMethod.GET)
+    @RequestMapping(value = "" , method = RequestMethod.GET)
     public Collection<String> listBasketItems(){
 
         return basketService.listBasketItems();
     }
 
-    @RequestMapping(value = "/calculateBasket" , method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}" , method = RequestMethod.GET)
+    public String listBasketItem(){
+
+        return basketService.listBasketItem();
+    }
+
+    @RequestMapping(value = "" , method = RequestMethod.POST)
+    public String addToBasket(@RequestBody String item){
+
+            return basketService.addToBasket(item);
+    }
+
+    @RequestMapping(value = "/{id}" , method = RequestMethod.DELETE)
+    public String removeFromBasket(String id){
+
+        return basketService.removeFromBasket(id);
+    }
+
+    @RequestMapping(value = "/calculate" , method = RequestMethod.GET)
     public String calculateBasket(){
 
         return basketService.calculateBasket();
