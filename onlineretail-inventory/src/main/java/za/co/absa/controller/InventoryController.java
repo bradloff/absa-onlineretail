@@ -36,7 +36,7 @@ public class InventoryController {
         return null;
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET )
+    @RequestMapping
     public Collection<Item> getAll(){
 
         return inventoryDB.getAll();
