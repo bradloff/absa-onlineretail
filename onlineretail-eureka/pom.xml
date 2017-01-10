@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>za.co.absa</groupId>
-	<artifactId>online-retail-inventory</artifactId>
+	<artifactId>onlineretail-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>online-retail-inventory</name>
+	<name>onlineretail-eureka</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
