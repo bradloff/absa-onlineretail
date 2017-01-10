@@ -36,7 +36,7 @@ public class BasketServiceImpl implements BasketService {
         }else{
             addedItem.setQuantity(existingItem.getQuantity() + 1);
         }
-        basketDb.db.put(Integer.parseInt(item), addedItem);
+        basketDb.db.put(item, addedItem);
 
 
         return addedItem;

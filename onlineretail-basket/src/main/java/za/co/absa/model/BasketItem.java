@@ -12,6 +12,8 @@ public class BasketItem {
 
     int quantity;
 
+    public BasketItem(){}
+
     public BasketItem(int id, int stock, String name, int quantity){
         setId(id);
         setStockCount(stock);

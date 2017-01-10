@@ -11,5 +11,5 @@ import java.util.HashMap;
 @Component
 public class BasketDB {
 
-    public  HashMap<Integer, BasketItem> db = new HashMap();
+    public  HashMap<String, BasketItem> db = new HashMap();
 }
