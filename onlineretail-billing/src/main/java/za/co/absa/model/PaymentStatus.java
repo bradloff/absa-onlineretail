@@ -6,7 +6,6 @@ package za.co.absa.model;
 public class PaymentStatus {
 
     private Long id;
-
     public PaymentStatus() {}
 
     public PaymentStatus(Long id) {
