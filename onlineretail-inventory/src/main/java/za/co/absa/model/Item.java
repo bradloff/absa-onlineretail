@@ -9,6 +9,12 @@ public class Item {
     int stockCount;
     String name;
 
+    public Item(int id, int stock, String name){
+        setId(id);
+        setStockCount(stock);
+        setName(name);
+    }
+
     public int getId() {
         return id;
     }
