@@ -9,4 +9,6 @@ public class OnlineretailInventoryApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OnlineretailInventoryApplication.class, args);
 	}
+
+
 }
