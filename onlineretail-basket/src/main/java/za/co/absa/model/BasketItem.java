@@ -1,5 +1,8 @@
 package za.co.absa.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created by taariqpetersen on 2017/01/10.
  */
@@ -8,6 +11,7 @@ public class BasketItem {
     int id;
     int stockCount;
     String name;
+    @Getter @Setter String serialNumber;
 
 
     int quantity;
@@ -50,5 +54,10 @@ public class BasketItem {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String toString(){
+        return String.format("Id: [%d], Name: [%s], Stock Count: [%d], Quanity in Basket [%d], Serial Number: [%s]",
+                id, name, stockCount, quantity, serialNumber);
     }
 }
