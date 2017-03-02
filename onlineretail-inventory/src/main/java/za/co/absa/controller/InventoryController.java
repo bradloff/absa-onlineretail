@@ -11,6 +11,7 @@ import za.co.absa.config.InMemoryDatabase;
 import za.co.absa.model.Item;
 
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collection;
 
 /**
@@ -18,7 +19,7 @@ import java.util.Collection;
  */
 
 @RestController
-@RequestMapping(value="inventory")
+@RequestMapping(value="v1")
 public class InventoryController {
 
     @Autowired
@@ -36,12 +37,11 @@ public class InventoryController {
         return null;
     }
 
-
-
-
     @RequestMapping(value = "/list", method = RequestMethod.GET )
-    public Collection<Item> getAll(){
+    public Collection<Item> getAll(HttpServletRequest httpReq){
+        String ts = httpReq.getHeader("osl-pre-timestamp");
 
+        System.out.printf(" ---------   %s   -------------\n", ts);
         return inventoryDB.getAll();
     }
 

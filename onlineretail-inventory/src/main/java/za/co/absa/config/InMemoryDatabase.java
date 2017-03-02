@@ -14,7 +14,6 @@ import java.util.List;
 public class InMemoryDatabase {
 
     HashMap<Integer, Item> itemDatabase = new HashMap();
-
     {
         itemDatabase.put(1, new Item(1, 100, "Raspberry Pi 3"));
         itemDatabase.put(2, new Item(2, 100, "Arduino Dev Kit 1"));
@@ -24,7 +23,6 @@ public class InMemoryDatabase {
         itemDatabase.put(6, new Item(6, 100, "PIC 3451"));
         itemDatabase.put(7, new Item(7, 100, "Power Adapter"));
     }
-
 
     public void addItem(Item item){
         itemDatabase.put(item.getId(), item);
